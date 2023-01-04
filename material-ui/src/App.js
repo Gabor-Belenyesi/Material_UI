@@ -2,32 +2,22 @@ import logo from './logo.svg'
 import './App.css'
 import { Button, Checkbox } from '@mui/material'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './components/Home'
+import Abaut from './components/Abaut'
+import Contact  from './components/Contact'
+import Art from './components/Art'
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button variant="outlined">Hello Codecool</Button>
-        <Checkbox defaultChecked />
-        <Checkbox />
-        <Checkbox disabled />
-        <Checkbox disabled checked />
-
-      </header>
-    </div>
+    <BrowserRouter>
+    <Routes>
+    <Route path='/' element={<Home />} />
+    <Route path='/abaut' element={<Abaut />} />
+    <Route path='/contact' element={<Contact />} />
+    <Route path='/art/:id' element={<Art />} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 

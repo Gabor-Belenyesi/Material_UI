@@ -1,8 +1,9 @@
 import React from 'react'
+import Layout from './Layout'
 
 function Abaut() {
   return (
-    <div>Abaut</div>
+    <Layout>Abaut</Layout>
   )
 }
 
